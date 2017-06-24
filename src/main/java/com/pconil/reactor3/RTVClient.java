@@ -16,7 +16,6 @@ import java.util.stream.*;
  */
 public class RTVClient {
     HttpClient httpClient = HttpClient.create("localhost", 8080);
-    Scheduler scheduler = Schedulers.newParallel("Parallel", 10, true);
     Gson gson = new GsonBuilder().create();
 
     Mono<Program> getRTVProgram(String external_id, LocalDate date) {
